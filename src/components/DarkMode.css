@@ -1,0 +1,134 @@
+
+#darkMode {
+    
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+    filter: grayscale(100%);
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+
+    border: 2px solid #800000;
+  }
+  
+  #darkMode:hover,
+  #darkMode:focus {
+    filter: none;
+    background-color: black;
+    cursor: pointer;
+  }
+  
+  #darkMode.clicked {
+    filter: none !important;
+    background-color: black;
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* //////*/
+
+
+
+
+
+
+
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*
+  background-color: #ccc;
+  */
+  background-color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+
+
+  border: 1px solid #800000;
+
+
+
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.slider:after {
+  position: absolute;
+  content: "";
+  font-family: 'FontAwesome';
+  font-size: 16px;
+  color: #f1c40f;
+  height: 26px;
+  width: 26px;
+  right: 4px;
+  bottom: 4px;
+  text-align: center;
+  line-height: 26px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+input:checked + .slider:before {
+  background-color: #fff;
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+input:checked + .slider:after {
+  content: "\f186" ;
+  color: #F6F1D5; /* when toggle switch is on */
+  -webkit-transform: translateX(-26px);
+  -ms-transform: translateX(-26px);
+  transform: translateX(-26px);
+}
+
+input:checked + .slider:before,
+input:checked + .slider:after {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+input + .slider:after {
+  content: "\f185";
+  color: #f1c40f; /* by default */
+}
